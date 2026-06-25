@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.njk", "./src/**/*.html", "./src/**/*.md"],
   theme: {
     extend: {
+      screens: {
+        nav: '990px',
+      },
       colors: {
         navy: {
           50:  '#EEF2FA',
@@ -31,17 +34,17 @@ module.exports = {
           DEFAULT: '#0AB5B7',
         },
         coral: {
-          50:  '#FEF0EC',
-          100: '#FDD4C8',
-          200: '#FBB5A0',
-          300: '#F99578',
-          400: '#F7775A',
-          500: '#F4583C',
-          DEFAULT: '#F4583C',
-          600: '#E03E24',
-          700: '#C22B15',
-          800: '#9E1D0C',
-          900: '#7A1105',
+          50:  '#FDE8E8',
+          100: '#FAC5C5',
+          200: '#F59E9E',
+          300: '#EE7373',
+          400: '#E54E4E',
+          500: '#D92B2B',
+          DEFAULT: '#D92B2B',
+          600: '#C22020',
+          700: '#A81818',
+          800: '#8A1010',
+          900: '#6B0A0A',
         },
         sand: {
           DEFAULT: '#FFF8F0',

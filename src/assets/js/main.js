@@ -49,7 +49,7 @@ document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
   let open = false;
 
   const initMobile = () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 990) {
       // Remove Tailwind's hidden class — we control visibility via max-height
       target.classList.remove('hidden');
       target.style.maxHeight = open ? target.scrollHeight + 'px' : '0';
@@ -67,7 +67,7 @@ document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
   initMobile();
 
   button.addEventListener('click', () => {
-    if (window.innerWidth >= 768) return;
+    if (window.innerWidth >= 990) return;
     open = !open;
     target.style.maxHeight = open ? target.scrollHeight + 'px' : '0';
   });

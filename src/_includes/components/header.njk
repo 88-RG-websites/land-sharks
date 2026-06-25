@@ -1,13 +1,8 @@
 <div class="fixed top-0 left-0 right-0 z-50">
 
-  <!-- Logo: anchored to top of entire header, overhangs nav -->
-  <a href="{{ "/" | url }}" class="absolute top-0 left-6 z-20 hidden md:block">
-    <img src="{{ "/assets/images/logo-nav.png" | url }}" alt="{{ client.name }}" class="h-[140px] w-auto drop-shadow-lg">
-  </a>
-
   <!-- Pre-header bar -->
-  <div class="bg-teal text-sm text-white hidden md:block">
-    <div class="max-w-screen-xl mx-auto px-4 py-2 flex items-center justify-center">
+  <div class="bg-teal text-sm text-white hidden nav:block">
+    <div class="max-w-[1500px] mx-auto px-4 py-2 flex items-center justify-center">
       <div class="flex items-center gap-6">
         <a href="tel:{{ client.phone | replace('-', '') }}" class="flex items-center gap-2 hover:text-white/75 transition-colors">
           <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
@@ -23,19 +18,24 @@
 
   <!-- Main nav -->
   <nav class="bg-[#0E2660] shadow-lg">
-    <div class="max-w-screen-xl flex flex-wrap items-stretch justify-between mx-auto">
+    <div class="max-w-[1500px] mx-auto relative flex flex-wrap items-stretch justify-between w-full">
+
+      <!-- Logo: anchored to top of the max-width container -->
+      <a href="{{ "/" | url }}" class="absolute top-1/2 -translate-y-1/2 left-6 z-20 hidden nav:block">
+        <img src="{{ "/assets/images/logo-nav.png" | url }}" alt="{{ client.name }}" class="h-[140px] w-auto drop-shadow-lg">
+      </a>
 
       <!-- Logo placeholder to reserve space on desktop -->
-      <div class="hidden md:block shrink-0 w-[130px]"></div>
+      <div class="hidden nav:block shrink-0 w-[165px]"></div>
 
       <!-- Mobile logo -->
-      <a href="{{ "/" | url }}" class="flex items-center shrink-0 py-3 px-4 md:hidden">
+      <a href="{{ "/" | url }}" class="flex items-center shrink-0 py-3 px-4 nav:hidden">
         <img src="{{ "/assets/images/logo-nav.png" | url }}" alt="{{ client.name }}" class="h-20 w-auto">
       </a>
 
       <!-- Mobile: Book Now + hamburger -->
-      <div class="flex items-center gap-2 shrink-0 pr-4 md:hidden">
-        <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-coral text-white font-bold text-xs uppercase tracking-wide shadow" style="border-radius: 99px 5px 99px 5px;">
+      <div class="flex items-center gap-2 shrink-0 pr-4 nav:hidden">
+        <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-coral text-white font-bold text-xs uppercase tracking-wide shadow" style="border-radius: 9999px;">
           Book Now &rarr;
         </a>
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal" aria-controls="navbar-default" aria-expanded="false">
@@ -47,9 +47,9 @@
       </div>
 
       <!-- Nav links + CTA -->
-      <div class="hidden w-full md:flex md:w-auto md:items-stretch md:justify-between md:flex-1" id="navbar-default">
-        <ul class="flex flex-col w-full md:w-auto md:flex-row md:items-stretch md:-ml-[50px]">
-          <li class="bg-[#0E2660]"><a href="{{ "/" | url }}#about" class="nav-link md:pl-[74px]"><span>About</span></a></li>
+      <div class="hidden w-full nav:flex nav:w-auto nav:items-stretch nav:justify-between nav:flex-1" id="navbar-default">
+        <ul class="flex flex-col w-full nav:w-auto nav:flex-row nav:items-stretch nav:-ml-[50px]">
+          <li class="bg-[#0E2660]"><a href="{{ "/" | url }}#about" class="nav-link nav:pl-[74px]"><span>About</span></a></li>
           <li class="bg-blue-900"><a href="{{ "/public-tours/" | url }}" class="nav-link"><span>Public Tours</span></a></li>
           <li class="bg-blue-800"><a href="{{ "/vessels/" | url }}" class="nav-link"><span>Vessels</span></a></li>
           <li class="bg-blue-700"><a href="{{ "/faq/" | url }}" class="nav-link"><span>FAQ</span></a></li>
@@ -57,7 +57,7 @@
           <li class="bg-blue-500"><a href="{{ "/gallery/" | url }}" class="nav-link"><span>Gallery</span></a></li>
         </ul>
 
-        <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="hidden md:flex md:items-center self-center shrink-0 px-6 py-2 bg-coral text-white font-bold text-sm shadow transition-all duration-200 hover:bg-coral-600 hover:shadow-lg" style="border-radius: 99px 5px 99px 5px; letter-spacing: 0.05em; text-transform: uppercase; transform-origin: center;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="hidden nav:flex nav:items-center self-center shrink-0 px-6 py-2 mr-6 bg-coral text-white font-bold text-sm shadow transition-all duration-200 hover:bg-coral-600 hover:shadow-lg" style="border-radius: 9999px; letter-spacing: 0.05em; text-transform: uppercase; transform-origin: center;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
           Book Now &rarr;
         </a>
       </div>
@@ -68,4 +68,4 @@
 </div>
 
 <!-- Spacer to prevent content from hiding behind fixed header -->
-<div class="h-[88px] md:h-[100px]"></div>
+<div class="h-[88px] nav:h-[100px]"></div>

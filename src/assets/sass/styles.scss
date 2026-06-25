@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  body {
+  html, body {
     @apply font-body text-gray-800 bg-white text-lg;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -122,6 +123,10 @@
       position: relative;
       z-index: 1;
     }
+
+    @media (min-width: 990px) and (max-width: 1050px) {
+      font-size: 0.9rem;
+    }
   }
 
   /* Stat stamps */
@@ -142,12 +147,12 @@
   /* Leaf cards */
   .leaf-card {
     @apply flex flex-col text-white w-full max-w-sm overflow-hidden transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl;
-    border-radius: 99px 15px 99px 15px;
+    border-radius: 15px;
 
     .leaf-card-image {
       @apply w-full overflow-hidden;
       height: 260px;
-      border-radius: 99px 15px 0 0;
+      border-radius: 15px 15px 0 0;
 
       img {
         @apply w-full h-full object-cover;
@@ -161,7 +166,7 @@
     .leaf-card-footer {
       @apply block text-center py-4 px-8 bg-navy-900 text-white font-bold uppercase tracking-widest text-sm transition-colors hover:bg-navy-800;
       font-family: "Google Sans", sans-serif;
-      border-radius: 0 0 99px 15px;
+      border-radius: 0 0 15px 15px;
       &::after { content: ' →'; }
     }
   }
