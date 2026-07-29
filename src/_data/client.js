@@ -10,4 +10,5 @@ module.exports = {
   domain: "https://www.landsharktours.com/",
   bookingDomain: "landsharktours",
   rgPath: "land-shark-tours",
+  instagram: "https://www.instagram.com/landshark805",
 };
