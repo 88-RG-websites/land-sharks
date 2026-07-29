@@ -7,7 +7,7 @@ module.exports = {
     zip: "93101",
   },
   phone: "805-683-7600",
-  domain: "https://www.landsharktours.com/",
+  domain: "https://www.landsharktours.com",
   bookingDomain: "landsharktours",
   rgPath: "land-shark-tours",
   instagram: "https://www.instagram.com/landshark805",

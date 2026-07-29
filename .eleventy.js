@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
   // Passthrough copy for assets
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("dist/css/styles.css");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   return {
     dir: {
