@@ -19,7 +19,7 @@ keywords: Santa Barbara public tours, Land Shark Tours tickets, Santa Barbara to
       <div class="flex flex-col lg:flex-row gap-10 items-start">
 
         <!-- Left sidebar -->
-        <div class="hidden lg:flex flex-col gap-5 w-80 shrink-0 stagger-children">
+        <div class="flex flex-col gap-5 w-full lg:w-80 lg:shrink-0 order-2 lg:order-1 stagger-children">
 
           <!-- Ticket Prices -->
           <div class="bg-blue-800 text-white rounded-2xl p-6">
@@ -40,7 +40,7 @@ keywords: Santa Barbara public tours, Land Shark Tours tickets, Santa Barbara to
         </div>
 
         <!-- Right: main content -->
-        <div class="flex-1 min-w-0">
+        <div class="flex-1 min-w-0 order-1 lg:order-2">
 
           <h2 class="font-heading text-4xl lg:text-5xl text-navy mb-4 fade-up">Land &amp; Sea Tours</h2>
           <div class="mb-10 fade-up">
@@ -58,19 +58,9 @@ keywords: Santa Barbara public tours, Land Shark Tours tickets, Santa Barbara to
             <p class="text-sm text-gray-500 italic">All tours are subject to cancellations. Some tour times may not be available. Passenger minimums may apply.</p>
           </div>
 
-          <!-- Leaf CTA -->
-          <div class="overflow-hidden w-full mt-10 fade-up" style="border-radius: 15px;">
-            <!-- Mobile: full bleed image with overlay -->
-            <div class="relative lg:hidden" style="min-height: 200px;">
-              <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
-              <div class="absolute inset-0 bg-blue-600/80"></div>
-              <div class="relative z-10 flex flex-col items-center justify-center text-white text-center px-8 py-12 gap-4">
-                <p class="font-heading text-2xl leading-snug">Ready for your Santa Barbara adventure?</p>
-                <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="btn-primary">Book Now</a>
-              </div>
-            </div>
-            <!-- Desktop: image left, text right -->
-            <div class="hidden lg:flex" style="min-height: 200px;">
+          <!-- Leaf CTA: desktop only -->
+          <div class="hidden lg:block overflow-hidden w-full mt-10 fade-up" style="border-radius: 15px;">
+            <div class="flex" style="min-height: 200px;">
               <div class="w-1/2 relative">
                 <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
               </div>
@@ -81,6 +71,18 @@ keywords: Santa Barbara public tours, Land Shark Tours tickets, Santa Barbara to
             </div>
           </div>
 
+        </div>
+
+        <!-- CTA: mobile only, after pricing card -->
+        <div class="lg:hidden overflow-hidden w-full order-3 fade-up" style="border-radius: 15px;">
+          <div class="relative" style="min-height: 200px;">
+            <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-blue-600/80"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center text-white text-center px-8 py-12 gap-4">
+              <p class="font-heading text-2xl leading-snug">Ready for your Santa Barbara adventure?</p>
+              <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="btn-primary">Book Now</a>
+            </div>
+          </div>
         </div>
 
       </div>
