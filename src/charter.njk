@@ -18,7 +18,7 @@ keywords: Santa Barbara private charter tour, private amphibious tour, group tou
       <div class="flex flex-col lg:flex-row gap-10 items-start">
 
         <!-- Left sidebar: pricing cards -->
-        <div class="hidden lg:flex flex-col gap-5 w-80 shrink-0 stagger-children">
+        <div class="flex flex-col gap-5 w-full lg:w-80 lg:shrink-0 order-2 lg:order-1 stagger-children">
 
           <!-- Private Charter Prices -->
           <div class="bg-navy-900 text-white rounded-2xl p-6">
@@ -66,7 +66,7 @@ keywords: Santa Barbara private charter tour, private amphibious tour, group tou
         </div>
 
         <!-- Right: main content -->
-        <div class="flex-1 min-w-0">
+        <div class="flex-1 min-w-0 order-1 lg:order-2">
 
           <h2 class="font-heading text-4xl lg:text-5xl text-navy mb-6 fade-up">Private Charter Tours</h2>
 
@@ -78,19 +78,9 @@ keywords: Santa Barbara private charter tour, private amphibious tour, group tou
             <p>For questions or to book, call <a href="tel:{{ client.phone }}" class="text-teal font-semibold hover:underline">{{ client.phone }}</a>. Learn more about the <a href="{{ "/vessels.html" | url }}" class="text-teal font-semibold hover:underline">vessel you will be riding in</a> or check out our <a href="{{ "/faq.html" | url }}" class="text-teal font-semibold hover:underline">FAQ page</a>.</p>
           </div>
 
-          <!-- Leaf CTA -->
-          <div class="overflow-hidden w-full mt-10 fade-up" style="border-radius: 15px;">
-            <!-- Mobile: full bleed image with overlay -->
-            <div class="relative lg:hidden" style="min-height: 200px;">
-              <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
-              <div class="absolute inset-0 bg-blue-600/80"></div>
-              <div class="relative z-10 flex flex-col items-center justify-center text-white text-center px-8 py-12 gap-4">
-                <p class="font-heading text-2xl leading-snug">Ready to request your charter?</p>
-                <a href="{{ "/" | url }}#contact" class="btn-primary">Get in Touch</a>
-              </div>
-            </div>
-            <!-- Desktop: image left, text right -->
-            <div class="hidden lg:flex" style="min-height: 200px;">
+          <!-- Leaf CTA: desktop only -->
+          <div class="hidden lg:block overflow-hidden w-full mt-10 fade-up" style="border-radius: 15px;">
+            <div class="flex" style="min-height: 200px;">
               <div class="w-1/2 relative">
                 <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
               </div>
@@ -101,6 +91,18 @@ keywords: Santa Barbara private charter tour, private amphibious tour, group tou
             </div>
           </div>
 
+        </div>
+
+        <!-- CTA: mobile only, after pricing cards -->
+        <div class="lg:hidden overflow-hidden w-full order-3 fade-up" style="border-radius: 15px;">
+          <div class="relative" style="min-height: 200px;">
+            <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-blue-600/80"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center text-white text-center px-8 py-12 gap-4">
+              <p class="font-heading text-2xl leading-snug">Ready to request your charter?</p>
+              <a href="{{ "/" | url }}#contact" class="btn-primary">Get in Touch</a>
+            </div>
+          </div>
         </div>
 
       </div>
