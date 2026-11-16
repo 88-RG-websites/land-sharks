@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build:css": "postcss src/assets/sass/styles.scss -o src/assets/css/styles.css",
-    "build": "npm run build:css && eleventy",
+    "build": "rm -rf dist && npm run build:css && eleventy",
+    "build:preview": "rm -rf dist && npm run build:css && PATH_PREFIX=${PATH_PREFIX:-/landsharktours.com/} eleventy",
     "serve": "npm run build:css && eleventy --serve",
     "watch:css": "postcss src/assets/sass/styles.scss -o src/assets/css/styles.css --watch",
     "watch": "npm-run-all --parallel watch:css serve"
